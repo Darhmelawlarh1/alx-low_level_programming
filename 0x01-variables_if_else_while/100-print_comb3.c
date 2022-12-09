@@ -1,15 +1,16 @@
-#include <stdio.h>                                                                                                                      
-/**                                                                                                                                     
-* main - entry                                                                                                                         
-* Return: 0                                                                                                                            
-*/                                                                                                                                     
-int main(void)                                                                                                                          
-{                                                                                                                                       
+#include <stdio.h>
+/**
+* main - Prints numbers between 0 to 9 and letters between a to f.
+*
+* Return: Always 0 (Success)
+*/
+int main(void)
+{                                                                                                                                 
 int ones = '0';                                                                                                                         
 int tens = '0';                                                                                                                         
 for (tens = '0'; tens <= '9'; tens++)                                                                                                   
 {                                                                                                                                       
-for (ones = '0'; ones <= '9'; ones++)                                                                                                   
+for (ones = '0'; ones <= '9'; ones++)                                                                                         
 {                                                                                                                                       
 if (!((ones == tens) || (tens > ones)))                                                                                                 
 {                                                                                                                                       
