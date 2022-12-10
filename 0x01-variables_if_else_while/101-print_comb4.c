@@ -5,24 +5,27 @@
 */
 int main(void)
 {
-int ones = '0';
-int tens = '0';
-int hundreds = '0';
-
-for (hundreds = '0'; hundreds <= '9'; hundreds++)
+int main(void)
+int i;
+int n;
+int j;
+for (i = 48; i < 58; i++)
 {
-for (tens = '0'; tens <= '9'; tens++)
+for (n = 48; n < 58; n++)
 {
-for (ones = '0'; ones <= '9'; ones++)
+if (n > i)
 {
-if (!((ones == tens) || (tens == hundreds) ||
-			(tens > ones) || (hundreds > tens))) /eliminates repitition/
+for (j = 48; j < 58; j++)
 {
-putchar(hundreds);
-putchar(tens);
-putchar(ones);
-if (!(ones == '9' && hundreds == '7' && tens == '8'))/adds commas and space/
+if (j > n)
 {
+putchar(i);
+putchar(n);
+putchar(j);
+if (i == 55 && n == 56 && j == 57)
+{
+break;
+}
 putchar(',');
 putchar(' ');
 }
