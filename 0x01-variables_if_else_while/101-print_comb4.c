@@ -1,33 +1,34 @@
 #include <stdio.h>
 /**
-* main - print all possible different combinations of three digits
-* Return: Always 0
-*/
+ * main - prints all combinations of three digits with,
+ * and space followed by new line
+ *
+ * Return: returns 0
+ */
 int main(void)
 {
-int ones = '0';
-int tens = '0';
-int hundreds = '0';
-for (hundreds = '0'; hundreds < = '9'; hundreds++)
-{
-for (tens = '0'; tens < = '9'; tens++)
-{
-for (ones = '0'; ones < = '9'; ones++)
-{
-if (!((ones == tens) || (tens == hundreds) || (tens > ones) || (hundreds > tens))) /eliminates repitition/
-{
-putchar(hundreds);
-putchar(tens);
-putchar(ones);
-if (!(ones == '9' && hundreds == '7' && tens == '8'))/adds commas and space/
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-}
-}
-putchar('\n');
-return (0);
+	int hund;
+	int tens;
+	int ones;
+
+	for (hund = 0; hund <= 9; hund++)
+	{
+		for (tens = hund + 1; tens <= 9; tens++)
+		{
+			for (ones = tens + 1; ones <= 9; ones++)
+			{
+				putchar(hund + '0');
+				putchar(tens + '0');
+				putchar(ones + '0');
+
+				if (hund < 7)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
