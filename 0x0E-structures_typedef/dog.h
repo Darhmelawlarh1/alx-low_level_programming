@@ -1,5 +1,5 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef STRTYP
+#define STRTYP
 
 
 	/**
@@ -32,4 +32,4 @@
 	int _strlen(char *s);
 
 
-	#endif
+#endif /*STRTYP*/
